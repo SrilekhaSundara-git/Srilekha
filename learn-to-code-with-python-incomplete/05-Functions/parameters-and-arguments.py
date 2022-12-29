@@ -6,3 +6,4 @@ def add(param1, param2):
     print('The sum of two numbers {} , {} is {}'.format(param1, param2, param1+param2))
     return None
 add(1,2)
+#comments
