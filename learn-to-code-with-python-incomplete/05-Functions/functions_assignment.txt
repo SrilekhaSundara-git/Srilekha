@@ -1,0 +1,21 @@
+What is a function?
+
+A function is a procedure, with the sequence of the steps to be performed.
+
+Tell me a little about parameters, arguments, and return values.
+
+A parameter is a variable in a method definition. When a method is called, the arguments are the data you pass into the method's parameters. A return keyword is specified inside the function, sometimes referred to as the end of the statement in the method.
+
+What is a default argument? How do you define one?
+
+a default argument is an argument to a function that a user is not required to specify on the function call.
+
+What data type represents nothingness or nonexistence or emptiness?
+
+None type
+
+What is the difference between positional arguments and keyword arguments?
+
+positional arguments: arguments passed to a function in the correct positional order.
+
+Keyword arguments are arguments that identify the parameters by their names.
