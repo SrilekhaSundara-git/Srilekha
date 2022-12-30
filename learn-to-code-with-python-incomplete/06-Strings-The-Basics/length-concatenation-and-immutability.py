@@ -1,0 +1,6 @@
+print(len('Hello'))
+print(len('Browney'))
+print(len(''))
+print(len("Srilekha"+" "+"Sundara"))
+print("a" "b" "c")
+print("___" * 30)
