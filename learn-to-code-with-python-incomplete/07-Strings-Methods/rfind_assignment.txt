@@ -1,0 +1,16 @@
+How does the rfind method work?
+
+The rfind() method returns the highest index of the substring (if found). If not found, it returns -1.
+
+Provide 3 examples of the rfind method in action. Write the invocation along with the return value.
+
+quote = 'Let it be, let it be, let it be'
+ 
+result = quote.rfind('let it')
+print("Substring 'let it':", result)
+ 
+result = quote.rfind('small')
+print("Substring 'small ':", result)
+ 
+quote = 'Do small things with great love'
+print(quote.rfind('th', 6, 20))
