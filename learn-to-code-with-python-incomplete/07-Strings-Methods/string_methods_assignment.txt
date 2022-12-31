@@ -1,0 +1,42 @@
+What is a method?
+
+A method is a function
+
+What is the difference between the find and index methods?
+
+Both methods find the first occurrence of a given substring in a string. However, in the case where the required substring is not found in the target string, there is a significant difference in the output of both these methods:
+
+find() returns -1.
+
+index() raises an exception.
+
+What single string method replaces uppercase characters with lowercase characters and lowercase characters with uppercase characters?
+
+swapcase()
+
+What are the 3 ways that you can provide arguments to the format method?
+
+name = "jack"
+print(f"hello my name is {name}")
+print("{} is {} for {}".format("apple", "good", "health"))
+print("{1} is {2} for {0}".format("apple", "good", "health"))
+
+
+What method removes whitespace from the beginning and end of a string?
+
+strip()
+
+What method capitalizes the first letter of each word in a string?
+
+title()
+
+What method substitutes all occurrences of a letter in a string with another letter?
+
+replace()
+
+Pick a string method that returns a Boolean and describe how it works. Provide a code example.
+
+fruit = "apple"
+
+print(fruit.isupper())
+
