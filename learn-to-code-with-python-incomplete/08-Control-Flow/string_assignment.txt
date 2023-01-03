@@ -1,0 +1,25 @@
+What is recursion?
+
+Recursion is when a function invokes or calls itself within it's own body. Python keeps track of each execution separately.
+
+Provide two examples of truthy values and two examples of falsy values. Do not use True or False.
+
+
+
+A empty string or the number zero evaluate to a falsy value. While a string with characters or positive values evaluates to a truthy value.
+
+True or False: elif cannot be used in combination with else. It’s either one or the other.
+
+
+
+False an if statement can be accompanied by several elifs statements and else statement.
+
+What is an infinite loop? How can you accidentally create one?
+
+An infinite loop is one which occurs when a program does not have a conditional statement that makes it terminate. It continues to run until the program runs out of memory.
+
+An infinite loop can be accidently created when a program always evaluates to True.
+
+Pick either the and keyword or the or keyword and describe what it does.
+
+or keyword evaluates to True if either one of two conditions is True. It evaluates to False if  both conditions are False.
