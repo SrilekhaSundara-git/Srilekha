@@ -9,3 +9,23 @@ def calculate(func, a, b):
     return func(a, b)
 print(calculate(add, 3, 5))
 print(calculate(subtract, 10, 4))
+
+def multiply(a, b):
+
+  return a * b
+
+
+
+def divide(a, b):
+
+  return a / b
+
+
+
+def calculate(func, a, b):
+
+  return func(a, b)
+
+
+
+print(calculate(multiply, 10, 5))

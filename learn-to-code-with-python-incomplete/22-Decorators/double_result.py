@@ -1,11 +1,18 @@
-def be_nice(fn):
+import functools
+
+def smartdivide(fn):
+    @functools.wraps(fn)
     def inner(*args, **kwargs):
         print("Nice to meet you! I'm honored to execute your function for you!")
         result = fn(*args, **kwargs)
         print("It was my pleasure executing your function! Have a nice day!")
         return result
     return inner
-@be_nice
-def complex_business_sum(a, b):
-    return a + b
-print(complex_business_sum(a = 3, b = 5))
+
+
+@smartdivide
+def divide(num1:int, num2:int)->int:
+    "Dividing two numbers"
+    return num1/num2
+print(divide(1,2))
+help(divide)
