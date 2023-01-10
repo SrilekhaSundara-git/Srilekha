@@ -1,0 +1,27 @@
+What is a property?
+
+In Python, the @property decorator is a built-in function that allows us to define methods that can be accessed like an attribute.
+
+What is a class method? How do you designate a method as a class method?
+
+A class method is a method that is bound to a class rather than its object. It doesn't require the creation of a class instance, much like the static method. The difference between a static method and a class method is: Static method knows nothing about the class and just deals with the parameters.
+
+What is a static method? How do you designate a method as a static method?
+
+A static method is a method that belongs to a class rather than an instance of a class. This means you can call a static method without creating an object of the class. Static methods are sometimes called class methods.
+
+What do the three arguments to the getattr function represent?
+
+getattr() the method takes three parameters:
+
+object - an object whose named attribute's value is to be returned
+
+name - a string that contains the attribute's name
+
+default (Optional) - value that is returned when the named attribute is not found
+
+
+
+When should you use a class attribute?
+
+The class attributes don’t associate with any specific instance of the class. But they’re shared by all instances of the class.

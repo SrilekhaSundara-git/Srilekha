@@ -43,7 +43,12 @@ class PizzaPie():
     def slices_eaten(self, slices_eaten):
         if slices_eaten<=self.total_slices:
             self._slices_eaten = slices_eaten
+    
+    @property
+    def percentage(self):
+        return self._slices_eaten / self.total_slices
 
 p = PizzaPie(8)
-p.slices_eaten = 10
+p.slices_eaten = 5
 print(p.slices_eaten)
+print(p.percentage)
