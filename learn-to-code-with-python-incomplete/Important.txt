@@ -1,0 +1,40 @@
+Operator:
+An operator represents a single task in a workflow that helps to carry out your task.
+DAGs only describe ‘how’ to run a workflowand they do not perform any actual action.
+On the other side, operators determine what actually gets to be done when your DAG runs.
+Now talking about its categories, Operators (in general) are classified into 3 main categories.
+
+1.Sensor Operators
+2.Transfer Operators 
+3.Action Operators
+1. Sensor Operators
+    Sensor operator will keep on checking that location on regular intervals and will only
+
+    move ahead once the required file arrives.
+
+    Not only file, sensor operators can be used in any case where you need some event to get
+
+    happened before other tasks can start.
+
+    Its Examples include an HdfsSensor waiting for a file landing in HDFS, a normal filesensor
+
+    etc.
+
+2.  We have transfer operators like MySqlToHiveTransfer operator that moves data from MySQL to Hive
+
+    location and S3ToRedshiftTransfer operator to transfer the files from s3 to Redshift
+
+    system.
+
+3. The operator name itself will tell you what action it is going to perform.
+
+    The BashOperator that was used is tutorial example to trigger Bash commands is one such
+
+    example of Action operators.
+
+    Not only BashOperator we have more action operators like PythonOperator to call an arbitrary
+
+    python function, then we have HiveOperator to execute any Hive script, BigQueryOperator
+
+    that executes Google BigQuery SQL and many more.
+

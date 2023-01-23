@@ -22,6 +22,24 @@
 
 # Sample Execution
 
+class BusTrip():
+    def __init__(self, destination, company, price):
+        self.destination = destination
+        self.company = company
+        self.price = price
+    def __str__(self):
+        return(f'You paid {self.price} to {self.company} to go to {self.destination}.')
+    
+
+    
+    def __eq__(self, other_destination):
+        same_destination = self.destination == other_destination.destination
+        same_price = abs(self.price-other_destination.price) <= 3
+        return bool(same_destination and same_price)
+
+
+
+
 
 
 boston1 = BusTrip(destination = "Boston", company = "Greyhound", price = 24.99)
