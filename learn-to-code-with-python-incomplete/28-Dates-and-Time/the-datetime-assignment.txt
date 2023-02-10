@@ -1,0 +1,27 @@
+1. What does a timedelta object represent? How is it different from a datetime?
+
+A timedelta object represents a duration or a measurement of a passage of time. In comparison, a datetime object represents a given moment in time (a date and time).
+
+2. Explain the difference between the following two syntax options.
+
+
+
+import datetime
+
+from datetime import datetime
+
+The first option imports the datetime module into the current file. All attributes on the module (i.e. time, datetime, timedelta) have to referenced with dot syntax (i.e. datetime.timedelta).
+
+The second option imports the datetime class from the datetime module into the current file’s namespace. The other names from within the datetime module are not made available. However, the datetime class can be used directly in-line, as if the class was defined in the current file.
+
+What do the six sequential arguments to the datetime constructor represent?
+
+The year, the month, the day, the hour, the minute, and the second.
+
+Given two datetime objects, how can I find the number of seconds that have elapsed between them?
+
+Subtract the earlier date from the later date using the subtraction symbol to get a timedelta object. Then, invoke the total_seconds method to return the number of seconds in the duration.
+
+What two class methods on the datetime class return a datetime object representing the present day?
+
+datetime.today and datetime.now
