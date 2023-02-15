@@ -1,0 +1,280 @@
+Title: Flatmates Bill
+Description: An app that gets as input the amount of a bill for a particular period and the days
+ that each of the flatmates satyed in the house for that period and returns how much each flatmate 
+ has to pay. It also generatea a PDF report starting the names of the flatmates, the period, how much each of them had to pay
+*************** Important **************
+
+However, I can tell you a trick, how to think what objects you need.
+
+So if you made a good description for your app,
+
+then by just looking at the nouns you have in your description text, you can make objects out of those
+
+nouns.
+
+So with objects we are talking about object types or classes, in other words.
+
+So classes that are going to create instances or object instances, in other words, so the nouns in
+
+the descriptions,
+
+what are they?
+
+App is a noun, amount is a noun.
+
+Bill is a noun.
+
+So these are nouns.
+
+Now let's start again.
+
+App? Do we need an object called App?
+
+Well, no.
+
+Even though it is a noun, it's the actual app.
+
+It doesn't make sense to have an app object.
+
+So ignore the app noun and let's see amount, that is a noun, but amount of a bill.
+
+So bill is a noun, amount is a noun.
+
+So it seems like a mound is actually an attribute of the bill.
+
+So what I'm saying, what I'm trying to say is that Bill is the object.
+
+Amount is one of the attributes of Bill, so if you are lost here, let me give you some clue.
+
+Let's say later on we are going to create the Python files.
+
+Right where we are going to have these classes, for example, class Bill, we said Bill is an object.
+
+So we create a class out of it, and then Bill is going to have an __init__ method, which is a default
+
+method so ta say.
+
+Now, this __init__ method is going to have an attribute amount so amount there. Why amount?
+
+Well, because to create a bill instance, a bill makes sense
+
+when it says an amount, it doesn't make sense to have an empty bill.
+
+So a bill needs to have an amount.
+
+So basically the code will look like this, self.amount equal to amount.
+
+And then when the program instantiates a bill with an amount of 120, for example.
+
+Bill is going to have these as an attribute, so bill.amount.
+
+Let's say I print this amount, we are going to use it differently later, we are going to use it in
+
+some math operations, but for now, let's say we print it out.
+
+So.
+
+Right-click, run and you're going to see that 120 is returns from this line.
+
+So that was to give you some context, to make sure that you are not completely lost of what I'm doing
+
+in here.
+
+So allow me to close and delete that file, because we are going to create it later on again and focus
+
+again on the design.
+
+Oh, all right.
+
+So we have a Bill class.
+
+Let's continue with the description. Amount of a bill for a particular period. Hm, period?
+
+So it sounds to me like period is also an attribute of a bill.
+
+So when we create a bill instance, we need the amount.
+
+But a bill also makes sense when it has a period attached to it.
+
+So period is also going to be part of Bill.
+
+OK, then.
+
+And the days.
+
+Days is a noun that each of the flatmate...
+
+Days of flatmates. So it sounds to me like we have
+
+a Flatmates class, which has
+
+a days attribute, or let's be more specific and say days_in_house.
+
+So the amount that a flatmate is going to be is depended on how many days he or she stays in the house.
+
+So if he stays 20 out of 30 days that the month has for that particular period, he'll pay depending
+
+on that weight.
+
+So twenty divided by 30 will produce a coefficient which we are going to implement later on.
+
+So for now, we are not talking about the implementation.
+
+We are talking about the design.
+
+So days in house.
+
+OK, so again, think of when we initialize a flatmate, let's say John and Marry are living in the house,
+
+and each of them has some days that stayed in the house.
+
+And so when we initialize Marry, Marry had some days that stayed in the house, but she also has a name.
+
+So how about adding a name for Marry as an attribute?
+
+Which is going to be a string later on.
+
+All right. In the house for that period. Period was part of bill. And returns
+
+how much each flat made has to pay.
+
+Flatmate has to pay.
+
+That's an action, so what does a flatmate do?
+
+Well, she or he can pay.
+
+So what I'm thinking of is here we have a pays method.
+
+So it's an operation which I think later on in this pays method, here is where we are going to implement
+
+the algorithm, the formula that is going to calculate how much of this flatmate has to pay.
+
+And how does that formula calculate?
+
+What information does this formula, this method need to calculate the amount to be paid by the flatmate?
+
+Well, it needs how many days the flatmate, that particular flatmate stayed in the house.
+
+And also it needs the total bill amount.
+
+Days_in_house is part of the class, so pays() is going to get days_in_house from the class but there
+
+is no bill amount here, so pays() is also going to get and as attributes a bill which is going to be an
+
+instance of Bill and then the pays() method,
+
+so inside the pays() method,
+
+we are going to have something like bill.amount to extract the amount from the bill object.
+
+But for now this is the design, not the implementation.
+
+So let's continue.
+
+It also, so the app also generates a PDF report.
+
+Hmm.
+
+It looks like we need a PdfReport.
+
+I think we can extract an object from that noun.
+
+It makes sense to have a PDF report whose responsibility is to generate a PDF file with the information
+
+about the flatmate names and how much they paid and the period pertaining to that particular bill amount.
+
+OK, so PdfReport. Now what
+
+necessary attributes, does a PDF report need to be initialized? So PdfReport is going to create a Pdf file,
+
+right?
+
+Therefore, I think that file needs to have a filename.
+
+So when PdfReport is initialized, we need to give it a file name.
+
+So think of it as in our code later on.
+
+PdfReport is going to be initialized like that, and as file name is going to have something like march_report.pdf.
+
+And that is going to create a PDF report file which needs to be saved
+
+as a Pdf file, so we are talking about
+
+a save method, which is going to finalize the creation of the PDF file.
+
+Now, you can also call this generate, if you like, or create. I think generate() would be more appropriate.
+
+So I'm going to leave it generate.
+
+And what information does the PdfReport object need?
+
+Well, we said that in the Pdf we are going to have the flatmates names.
+
+So in the generate methods, we're going to have flatmate1, flatmate2, so these two parameters
+
+are going to expect
+
+a flatmate object instance for the first flatmate and also another flatmate object inserts for
+
+the second flatmate.
+
+And also we need the information about the billamont.
+
+Therefore, we also need a bill instance in order to extract the amount of the bill and also the period
+
+of the bill.
+
+And that's all we need.
+
+Let's see if we need other objects, so it generates a PDF report stating the names of the flatmates,
+
+all right, the period, we had them as parameters of generate(). And how much each of them had to pay?
+
+How much each of them had to pay?
+
+We are going to extract that information from the flatmate
+
+pays() method.
+
+So in the PdfReport, we are basically going to execute the flatmate1.pays() method in order to
+
+get how much flatmate1 paid and also again, flatmate2.pays to extract the amount that
+
+the second flatmate also had to pay.
+
+And that's it.
+
+We are at the end of the description text, and these are the three objects that we are going to have.
+
+Well, that's not 100 percent sure, because it's true that you really need a design to be able to write
+
+a good program.
+
+But sometimes on the way during the process of coding your app, you could come up with other ideas
+
+or problems and that could change what objects you need.
+
+So you may have to remove an object or you may need to add another object type in your program, and
+
+that's totally fine.
+
+So I'm trying to say that this is a very good, excellent orientation to lead the way during the coding
+
+part, but don't feel too connected to the design.
+
+Things may change.
+
+*******************************************************************************
+Obbjects: Bill:
+            amount
+            period
+        Flatmate:
+            name
+            days_in_house
+            pays(bill)
+        PdfReport:
+            filename
+            generate(flatemate1, flatemate2, bill)
+
