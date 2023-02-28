@@ -1,0 +1,32 @@
+What assertion checks that a value exists in a list? Provide an example.
+
+The assertIn assertion is used to check that a value exists in a list (or any other iterable sequence).
+
+self.assertIn(15, [20, 15])
+
+What assertion checks that an object is not made from a specific class? Provide an example.
+
+The assertNotIsInstance assertion is used to validate that an object is not instantiated from a specific class.
+
+self.assertNotIsInstance(5, str)
+
+What does the final argument to any assertion represent?
+
+The final argument to any assertion is an optional error message to be displayed in the output if the assertion fails.
+
+Provide an example of an assertion that tests that a piece of code raises a NameError.
+
+import unittest
+
+class UndeclaredVariableExample(unittest.TestCase):
+  def test_divide(self):
+    with self.assertRaises(NameError):
+      x
+
+if __name__ == "__main__":
+  unittest.main()
+What is the difference between the assertIs and assertEqual assertions?
+
+The assertEqual assertion checks that two objects are equal, meaning the values they hold are the same.
+
+The assertIs assertion checks that two names in the program refer to the same object in memory.

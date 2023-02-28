@@ -7,6 +7,7 @@ class Bill:
         self.amount = amount
         self.period = period
 
+
 class Flatmate:
     """
     Creates a flatmate person who lives in a flat and 
